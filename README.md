@@ -6,7 +6,7 @@ An AI-powered scouting assistant for the 2026 NFL Draft, combining semantic sear
 
 NFL Draft Scout AI is a RAG (Retrieval-Augmented Generation) system that enables users to query over 500 NFL draft prospects using conversational language. The system combines vector database search with AI-powered analysis to deliver contextual insights based on player statistics, consensus rankings, and performance metrics.
 
-[![Live Demo](https://img.shields.io/badge/Demo-nfldraftscoutai.org-green)](https://nfldraftscoutai.org)
+[![Live Demo](https://img.shields.io/badge/Demo-nfldraftscoutai.org-green)](https://www.nfldraftscoutai.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](license)
 
 ## Features
