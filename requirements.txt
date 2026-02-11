@@ -1,0 +1,19 @@
+# Web scraping (for future use)
+requests==2.31.0
+beautifulsoup4==4.12.2
+lxml==4.9.3
+
+# Vector Database & AI
+chromadb>=0.4.22
+anthropic>=0.18.0
+sentence-transformers>=2.2.0
+
+# Web Framework
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# Additional dependencies
+gunicorn>=21.2.0
+
+# Environment variables
+python-dotenv>=1.0.0

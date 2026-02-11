@@ -1,0 +1,502 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Root variables using the color palette */
+:root {
+  --wheat: #F8DEB5;
+  --blue-slate: #4E717E;
+  --dark-amethyst: #100A33;
+  --evergreen: #132B1F;
+  --molten-lava: #711B09;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, var(--dark-amethyst) 0%, #1a1444 50%, var(--evergreen) 100%);
+  color: var(--wheat);
+  min-height: 100vh;
+}
+
+/* Main app container */
+.min-h-screen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--dark-amethyst) 0%, #1a1444 50%, var(--evergreen) 100%);
+}
+
+/* Header styles */
+header {
+  background: rgba(16, 10, 51, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(248, 222, 181, 0.15);
+  padding: 1.5rem 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--wheat);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--wheat);
+  opacity: 0.7;
+  font-size: 1rem;
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+/* Sidebar cards */
+.bg-slate-800\/50,
+.backdrop-blur-sm {
+  background: rgba(78, 113, 126, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(248, 222, 181, 0.2);
+  border-radius: 16px;
+}
+
+/* Card headers */
+h2, h3 {
+  color: var(--wheat);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Stats display */
+.space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Stat items */
+.text-slate-400,
+.text-slate-300 {
+  color: var(--wheat);
+  opacity: 0.8;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-blue-400 {
+  color: var(--wheat);
+  font-weight: 700;
+}
+
+.text-green-400 {
+  color: #90EE90;
+  font-weight: 700;
+}
+
+/* Status indicators */
+.text-green-500 {
+  color: #90EE90;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+/* Suggested questions */
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+button {
+  width: 100%;
+  text-align: left;
+  padding: 0.875rem 1rem;
+  background: rgba(78, 113, 126, 0.2);
+  border: 1px solid rgba(248, 222, 181, 0.25);
+  border-radius: 10px;
+  color: var(--wheat);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+button:hover:not(:disabled) {
+  background: rgba(78, 113, 126, 0.35);
+  border-color: var(--blue-slate);
+  transform: translateX(4px);
+}
+
+/* Reset button (top right) */
+.bg-slate-700 {
+  background: rgba(113, 27, 9, 0.3);
+  border: 1px solid rgba(248, 222, 181, 0.25);
+}
+
+.bg-slate-700:hover {
+  background: rgba(113, 27, 9, 0.5);
+  border-color: var(--molten-lava);
+}
+
+/* Chat container */
+.lg\:col-span-3 {
+  grid-column: span 3;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+/* Messages area */
+.flex-1 {
+  flex: 1;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: rgba(248, 222, 181, 0.05);
+  border-radius: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: var(--blue-slate);
+  border-radius: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(78, 113, 126, 0.8);
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.sm\:p-6 {
+  padding: 1.5rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+/* Message bubbles */
+.max-w-3xl {
+  max-width: 48rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: 12px;
+}
+
+/* User message (blue bubble) */
+.bg-blue-600 {
+  background: linear-gradient(135deg, var(--blue-slate) 0%, var(--evergreen) 100%);
+  color: var(--wheat);
+  border: 1px solid rgba(248, 222, 181, 0.3);
+}
+
+/* AI message (gray bubble) */
+.bg-slate-700 {
+  background: rgba(19, 43, 31, 0.5);
+  color: var(--wheat);
+  border: 1px solid rgba(248, 222, 181, 0.2);
+}
+
+.text-white {
+  color: var(--wheat);
+}
+
+.text-slate-100 {
+  color: var(--wheat);
+}
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+
+/* Loading animation */
+.animate-bounce {
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.h-2 {
+  height: 0.5rem;
+}
+
+.bg-blue-400 {
+  background: var(--blue-slate);
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Input area */
+.border-t {
+  border-top: 1px solid rgba(248, 222, 181, 0.2);
+}
+
+.border-slate-700 {
+  border-color: rgba(248, 222, 181, 0.2);
+}
+
+.space-x-2 > * + * {
+  margin-left: 0.5rem;
+}
+
+/* Input field */
+input[type="text"] {
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  background: rgba(78, 113, 126, 0.2);
+  border: 1px solid rgba(248, 222, 181, 0.3);
+  border-radius: 12px;
+  color: var(--wheat);
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--blue-slate);
+  background: rgba(78, 113, 126, 0.3);
+}
+
+input[type="text"]::placeholder {
+  color: var(--wheat);
+  opacity: 0.5;
+}
+
+/* Send button */
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.hover\:bg-blue-700:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--molten-lava) 0%, #8B2209 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(113, 27, 9, 0.4);
+}
+
+button.px-6 {
+  background: linear-gradient(135deg, var(--molten-lava) 0%, #5A1507 100%);
+  border: 1px solid rgba(113, 27, 9, 0.5);
+}
+
+.disabled\:bg-slate-600:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.disabled\:cursor-not-allowed:disabled {
+  cursor: not-allowed;
+}
+
+.transition-colors {
+  transition: all 0.2s ease;
+}
+
+/* Welcome message */
+.text-center {
+  text-align: center;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .sm\:text-3xl {
+    font-size: 1.75rem;
+  }
+}
+
+/* Additional utility classes */
+.max-w-7xl {
+  max-width: 80rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.sm\:px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.lg\:px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-slate-700 {
+  border-color: rgba(248, 222, 181, 0.2);
+}
+
+.rounded-xl {
+  border-radius: 16px;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+/* Specific overrides for current layout */
+.bg-gradient-to-br {
+  background: linear-gradient(135deg, var(--dark-amethyst) 0%, #1a1444 50%, var(--evergreen) 100%);
+}
+
+.from-slate-900 {
+  /* Handled by gradient above */
+}
+
+.via-slate-800 {
+  /* Handled by gradient above */
+}
+
+.to-slate-900 {
+  /* Handled by gradient above */
+}
+
+.bg-slate-900\/50 {
+  background: rgba(16, 10, 51, 0.8);
+}

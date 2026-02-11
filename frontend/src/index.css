@@ -1,0 +1,107 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-dark-amethyst text-wheat;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  /* Custom scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-amethyst-700;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-blue-slate-500 rounded;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-slate-400;
+  }
+}
+
+@layer components {
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-gradient-button text-wheat px-6 py-3 rounded-lg font-semibold;
+    @apply transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg;
+    @apply border border-molten-lava border-opacity-50;
+  }
+
+  .btn-secondary {
+    @apply bg-blue-slate-500 bg-opacity-20 text-wheat px-4 py-2 rounded-lg;
+    @apply border border-wheat border-opacity-25;
+    @apply transition-all duration-200 hover:bg-opacity-35 hover:border-blue-slate-500;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-blue-slate-500 bg-opacity-15 backdrop-blur-sm rounded-xl;
+    @apply border border-wheat border-opacity-20 shadow-xl;
+  }
+
+  /* Input styles */
+  .input-field {
+    @apply bg-blue-slate-500 bg-opacity-20 text-wheat;
+    @apply border border-wheat border-opacity-30 rounded-lg px-4 py-3;
+    @apply placeholder-wheat placeholder-opacity-50;
+    @apply focus:outline-none focus:border-blue-slate-500 focus:bg-opacity-30;
+    @apply transition-all duration-200;
+  }
+
+  /* Message bubble styles */
+  .message-user {
+    @apply bg-gradient-card text-wheat px-4 py-3 rounded-lg;
+    @apply border border-wheat border-opacity-30 max-w-3xl;
+  }
+
+  .message-assistant {
+    @apply bg-evergreen-500 bg-opacity-50 text-wheat px-4 py-3 rounded-lg;
+    @apply border border-wheat border-opacity-20 max-w-3xl;
+  }
+}
+
+@layer utilities {
+  /* Custom gradient backgrounds */
+  .bg-gradient-dark {
+    background: linear-gradient(135deg, #132B1F 0%, #1a2d33 60%, #100A33 100%);
+  }
+
+  .bg-gradient-card {
+    background: linear-gradient(135deg, #132B1F 0%, #4E717E 100%);
+  }
+
+  .bg-gradient-button {
+    background: linear-gradient(135deg, #711B09 0%, #5A1507 100%);
+  }
+
+  /* Text shadow for better readability */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Smooth hover translate */
+  .hover-translate {
+    @apply transition-transform duration-200 hover:translate-x-1;
+  }
+}
